@@ -32,7 +32,7 @@ function getInfo(botResponse, options, body, botReq){
   
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
-        console.log('HEADERS: ' + JSON.stringify(res.headers));
+        botResponse = JSON.stringify(res.headers);
       } else {
         console.log('rejecting bad status code ' + res.statusCode);
       }
