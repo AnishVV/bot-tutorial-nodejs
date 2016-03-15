@@ -1,7 +1,7 @@
 {
-  "name": "Cool guy bot",
-  "description": "Basic Groupme Bot written in Node",
-  "repository": "https://github.com/petemcgrath/cool-guy-bot",
-  "logo": "http://www.tailgate365.com/wp-content/uploads/2011/06/tom-hanks-906.jpg",
+  "name": "Story Time Bot",
+  "description": "GroupMe Bot notifies members when it is story time",
+  "repository": "https://github.com/AnishVV/bot-tutorial-nodejst",
+  "logo": "https://languageplayprojectdotorg.files.wordpress.com/2015/11/storytime-icon-2.png",
   "keywords": []
 }
