@@ -51,7 +51,7 @@ function getInfo(botResponse, options, body, botReq){
 function postMessage() {
   var botResponse, options, body, botReq;
   
-  botResponse = "@Seeeaaannn Gajjar"
+  // botResponse = "@Seeeaaannn Gajjar"
   getInfo(botResponse, options, body, botReq);
   options = {
     hostname: 'api.groupme.com',
@@ -61,7 +61,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : getBotResponse()
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
@@ -83,5 +83,15 @@ function postMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-
+function getBotResponse(){//no clue how this wokrs yet lolololololol
+  var botResponse;
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/chats',
+    method: 'GET'
+  };
+  body = {
+    "text" = botResponse
+  }
+}
 exports.respond = respond;
