@@ -52,19 +52,25 @@ function postMessage() {
   var botResponse, options, body, botReq;
   
   botResponse = "@Seeeaaannn Gajjar"
-  getInfo(botResponse, options, body, botReq);
+  
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
     method: 'POST'
   };
 
-  body = {
-    "bot_id" : botID,
+  var attachments = {
     "user_ids" : "6842543",
     "loci" : [0,18],
     "type" : "mentions"
   };
+  
+  body = {
+    "bot_id" : botID,
+    "text" : botResponse,
+    "attachments" : attachments
+  };
+  
 
   console.log('sending ' + botResponse + ' to ' + botID);
 
