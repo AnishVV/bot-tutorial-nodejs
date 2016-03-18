@@ -61,7 +61,9 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "user_ids" : "6842543"
+    "loci" : [0,18],
+    "type" : "mentions"
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
