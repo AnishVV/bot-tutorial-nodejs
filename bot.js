@@ -67,7 +67,6 @@ function postMessage() {
   
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
     "attachments" : attachments
   };
   
