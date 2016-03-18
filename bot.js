@@ -61,7 +61,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "user_ids" : "6842543"
+    "user_ids" : "6842543",
     "loci" : [0,18],
     "type" : "mentions"
   };
