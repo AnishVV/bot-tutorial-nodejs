@@ -4,10 +4,10 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = "sideways";
-  var lowercase = request.text.toLowerCase();
-  if(request.text && lowercase.indexOf(botRegex)) {
+    var request = JSON.parse(this.req.chunks[0]);
+    var lowercase = request.text.toLowerCase();
+  if(lowercase.indexOf("sideways") > -1) {
+    this.res.writeHead(200);
     this.res.writeHead(200);
     postMessage();
     this.res.end();
