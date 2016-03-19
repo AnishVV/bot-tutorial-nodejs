@@ -35,8 +35,8 @@ function postMessage() {
     "text" : botResponse,
     "attachments" : [
           {
-            "type" : "image",
-            "url" : "https://www.google.com/images/nav_logo242.png"
+            "type" : "mentions",
+            "user_ids" : ["20642442"]
           }
         ]
   };
