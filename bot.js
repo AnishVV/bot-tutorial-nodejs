@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Story Time$/;
+      botRegex = /^\/Sideways$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -16,35 +16,6 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-}
-
-function getInfo(botResponse, options, body, botReq){
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/groups',
-    method: 'GET'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
-  
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        botResponse = JSON.stringify(res.headers);
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
 }
 
 
@@ -62,7 +33,7 @@ function postMessage() {
   body = {
     "bot_id" : botID,
     "text" : botResponse,
-    "attachments" : "[{\"type\":\"image\",\"url\":\"" + "https://www.google.com/images/nav_logo242.png" + "\"}]";
+    // "attachments" : "[{\"type\":\"image\",\"url\":\"" + "https://www.google.com/images/nav_logo242.png" + "\"}]";
   };
   
 
