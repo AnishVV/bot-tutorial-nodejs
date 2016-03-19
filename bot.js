@@ -93,7 +93,7 @@ function postMessage(text) {
     "attachments" : [
           {
             "type" : "image",
-            "url" : "https://drive.google.com/file/d/0B29SclkJI2GvYjVtWmZJZW10czQ/view?usp=sharing"
+            "url" : "https://i.groupme.com/540x960.png.b64be84c1a0f4b56945ffcb94dba035f.large"
           }
         ]
     };
