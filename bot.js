@@ -9,7 +9,7 @@ function respond() {
   if(request.text && lowercase.indexOf("sideways") > -1) {
     this.res.writeHead(200);
     this.res.writeHead(200);
-    postMessage(lowercase);
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
@@ -19,11 +19,10 @@ function respond() {
 }
 
 
-function postMessage(text) {
+function postMessage() {
   var botResponse, options, body, botReq;
   
-//   botResponse = "@Seeeaaannn Gajjar /nGDI Prashant"
-  botResponse = text;
+  botResponse = "@Seeeaaannn Gajjar /nGDI Prashant"
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
