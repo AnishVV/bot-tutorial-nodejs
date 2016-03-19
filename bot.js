@@ -33,7 +33,12 @@ function postMessage() {
   body = {
     "bot_id" : botID,
     "text" : botResponse,
-    // "attachments" : "[{\"type\":\"image\",\"url\":\"" + "https://www.google.com/images/nav_logo242.png" + "\"}]";
+    "attachments" : [
+          {
+            "type" : "image",
+            "url" : "https://www.google.com/images/nav_logo242.png"
+          }
+        ]
   };
   
 
