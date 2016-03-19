@@ -21,6 +21,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("Story");
     this.res.end();
+  } else if (request.text && lowercase.indexOf("milk gain") > -1) {
+    this.res.writeHead(200);
+    this.res.writeHead(200);
+    postMessage("Sri");
+    this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -74,6 +79,23 @@ function postMessage(text) {
     body = {
     "bot_id" : botID,
     "text" : botResponse,
+    };
+  } else if(text.indexOf("Sri") > -1){
+    botResponse = "Dudu Gainz";
+    options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+    };
+    
+    body = {
+    "bot_id" : botID,
+    "attachments" : [
+          {
+            "type" : "image",
+            "url" : "https://drive.google.com/file/d/0B29SclkJI2GvYjVtWmZJZW10czQ/view?usp=sharing"
+          }
+        ]
     };
   }
 
