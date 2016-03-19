@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = "Sideways";
+      botRegex = "sideways";
   var lowercase = request.text.toLowerCase();
   if(request.text && lowercase.indexOf(botRegex)) {
     this.res.writeHead(200);
