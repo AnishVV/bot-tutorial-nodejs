@@ -9,7 +9,12 @@ function respond() {
   if(request.text && lowercase.indexOf("sideways") > -1) {
     this.res.writeHead(200);
     this.res.writeHead(200);
-    postMessage();
+    postMessage("Prashant");
+    this.res.end();
+  } else if (request.text && lowercase.indexOf(" RD ") > -1) {
+    this.res.writeHead(200);
+    this.res.writeHead(200);
+    postMessage("Arti");
     this.res.end();
   } else {
     console.log("don't care");
@@ -19,28 +24,43 @@ function respond() {
 }
 
 
-function postMessage() {
+function postMessage(text) {
   var botResponse, options, body, botReq;
   
-  botResponse = "@Seeeaaannn Gajjar /nGDI Prashant"
-  options = {
+  if(text.indexOf("Prashant") > -1){
+    botResponse = "I am @Prashant and I sleep wrong"
+    options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
     method: 'POST'
-  };
-  
-  body = {
+    };
+    
+    body = {
     "bot_id" : botID,
     "text" : botResponse,
     "attachments" : [
           {
             "type" : "mentions",
-            "loci":[[0,18]],
-            "user_ids" : ["6842543"]
+            "loci":[[6,14]],
+            "user_ids" : ["6842543"] // Change this to Prashant
           }
         ]
-  };
+    };
+  }
   
+  if(text.indexOf("Arti") > -1){
+    botResponse = "ITS SPELLED \"RD\" FOR THE LAST TIME!!";
+    options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+    };
+    
+    body = {
+    "bot_id" : botID,
+    "text" : botResponse,
+    };
+  }
 
   console.log('sending ' + botResponse + ' to ' + botID);
 
