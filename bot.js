@@ -5,11 +5,11 @@ var botID = process.env.BOT_ID;
 
 function respond() {
     var request = JSON.parse(this.req.chunks[0]);
-    var lowercase = request.text.toLowerCase();
-  if(request.text) {
+    var lowercase = (request.text).toLowerCase();
+  if(true) {
     this.res.writeHead(200);
     this.res.writeHead(200);
-    postMessage(request.text);
+    postMessage(lowercase);
     this.res.end();
   } else {
     console.log("don't care");
