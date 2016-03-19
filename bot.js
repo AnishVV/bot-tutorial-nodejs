@@ -11,7 +11,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("Prashant");
     this.res.end();
-  } else if (request.text && lowercase.indexOf(" RD ") > -1) {
+  } else if (request.text && lowercase.indexOf("Arti") > -1) {
     this.res.writeHead(200);
     this.res.writeHead(200);
     postMessage("Arti");
