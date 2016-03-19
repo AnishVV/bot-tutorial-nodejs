@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/Sideways$/;
+      botRegex = /^\/Story Time$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -51,7 +51,7 @@ function getInfo(botResponse, options, body, botReq){
 function postMessage() {
   var botResponse, options, body, botReq;
   
-  botResponse = "Damn it Prashant \n @Seeeaaannn Gajjar"
+  botResponse = "GDI Prashant \n@Seeeaaannn Gajjar"
   
   options = {
     hostname: 'api.groupme.com',
@@ -61,7 +61,8 @@ function postMessage() {
   
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : botResponse,
+    "attachments" : "[{\"type\":\"image\",\"url\":\"" + "https://www.google.com/images/nav_logo242.png" + "\"}]";
   };
   
 
