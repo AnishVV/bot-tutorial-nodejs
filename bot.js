@@ -16,7 +16,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("Arti");
     this.res.end();
-  } else if (request.text && lowercase.indexOf("story time!") > -1) {
+  } else if (request.text && lowercase.indexOf("story time") > -1) {
     this.res.writeHead(200);
     this.res.writeHead(200);
     postMessage("Story");
