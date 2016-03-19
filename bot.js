@@ -36,7 +36,8 @@ function postMessage() {
     "attachments" : [
           {
             "type" : "mentions",
-            "user_ids" : ["20642442"]
+            "loci":[[0,18]],
+            "user_ids" : ["6842543"]
           }
         ]
   };
