@@ -51,7 +51,7 @@ function postMessage(text) {
     "attachments" : [
           {
             "type" : "mentions",
-            "loci":[[5,14]],
+            "loci":[[5,11]],
             "user_ids" : ["19836550"] // Change this to Prashant
           }
         ]
