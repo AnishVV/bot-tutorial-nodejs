@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]);
     var lowercase = (request.text).toLowerCase();
-  if(lowercase.indexOf("sideways") > -1) {
+  if(request.text && lowercase.indexOf("sideways") > -1) {
     this.res.writeHead(200);
     this.res.writeHead(200);
     postMessage(lowercase);
