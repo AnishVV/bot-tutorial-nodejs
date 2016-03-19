@@ -6,10 +6,10 @@ var botID = process.env.BOT_ID;
 function respond() {
     var request = JSON.parse(this.req.chunks[0]);
     var lowercase = request.text.toLowerCase();
-  if(lowercase.indexOf("sideways") > -1) {
+  if(request.text) {
     this.res.writeHead(200);
     this.res.writeHead(200);
-    postMessage();
+    postMessage(request.text);
     this.res.end();
   } else {
     console.log("don't care");
@@ -19,11 +19,11 @@ function respond() {
 }
 
 
-function postMessage() {
+function postMessage(text) {
   var botResponse, options, body, botReq;
   
-  botResponse = "@Seeeaaannn Gajjar /nGDI Prashant"
-  
+//   botResponse = "@Seeeaaannn Gajjar /nGDI Prashant"
+  botResponse = text;
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
